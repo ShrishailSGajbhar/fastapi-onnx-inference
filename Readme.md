@@ -10,7 +10,10 @@
 2. Go to [http://localhost:8502](http://localhost:8502) for Streamlit UI (fronted)
 3. Go to [http://localhost:8001/docs](http://localhost:8001/docs) for Swagger UI (backend)
 
+#### Example for positive sentiment
 ![sample-1](./frontend_1.png)
+#### Example for negative sentiment
 ![sample-2](./frontend_2.png)
+#### Swagger UI for backend APIs
 ![sample-3](./backend.png)
 
