@@ -5,6 +5,7 @@ import torch
 import numpy as np
 from transformers import RobertaTokenizer
 import onnxruntime
+from fastapi.middleware.cors import CORSMiddleware
 
 
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
@@ -14,8 +15,17 @@ session = onnxruntime.InferenceSession("roberta-sequence-classification-9.onnx")
 class Body(BaseModel):
     phrase: str
 
-
 app = FastAPI()
+
+# Allow requests from any origin
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow requests from any origin
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],  # Allow these HTTP methods
+    allow_headers=["*"],  # Allow all headers
+)
+
 
 
 @app.get('/')
