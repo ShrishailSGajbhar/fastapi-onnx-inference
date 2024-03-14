@@ -6,6 +6,11 @@
 * Docker
 * Binary file for the task in onnx format. Download it from this [link](https://github.com/kundanapillari/models/tree/master/text/machine_comprehension/roberta/model) and put in the webapp folder 
 
-1. Create a docker image using command `docker build -t fastapi-onnx-sentiment .`
-2. Run the container using `docker run -d -p 8000:8000 fastapi-onnx-sentiment`
-3. Go to [http://0.0.0.0:8000](http://0.0.0.0:8000) for Swagger UI
+1. Create a docker containers for `frontend` and `backend` services using command `docker-compose up -d`
+2. Go to [http://localhost:8502](http://localhost:8502) for Streamlit UI (fronted)
+3. Go to [http://localhost:8001/docs](http://localhost:8001/docs) for Swagger UI (backend)
+
+![sample-1](./frontend_1.png)
+![sample-2](./frontend_2.png)
+![sample-3](./backend.png)
+
